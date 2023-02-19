@@ -42,7 +42,11 @@ const InfoWrapper = styled.div`
     .info-title {
       width: 40rem;
     }
-    .info-text {
+  }
+
+  @media (max-width: 440px) {
+    .info-title {
+      width: 30rem;
     }
   }
 `;

@@ -1,12 +1,8 @@
+export const apiLink =
+  "https://my-json-server.typicode.com/ilonmakh/emails/emails";
 export const overDateTimestamp = Math.round(
   +new Date(2023, 4, 31, 0, 0) / 1000
 );
-export const timeAmount = {
-  seconds: "00",
-  minutes: "00",
-  hours: "00",
-  days: "00",
-};
 
 export const measures = [
   {
@@ -29,3 +25,8 @@ export const measures = [
     short: "SS",
   },
 ];
+
+export const storeInitialValue = {
+  isPopupOpen: false,
+  isResponseOk: true,
+};

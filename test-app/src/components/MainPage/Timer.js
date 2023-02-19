@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Sheet from "../../assets/images/sheet.svg";
 import { measures, timeAmount } from "../../constants/constants";
-import { convertTime } from "../helpers/convertTime";
+import { convertTime } from "../../helpers/convertTime";
 
 const StyledTimer = styled.div`
   display: flex;
@@ -64,10 +64,10 @@ const TimerItem = styled.div`
 
 export const Timer = ({ overDateTimestamp }) => {
   const [screenWidth, setScreenWidth] = useState(window.screen.width);
-  const [time, setTime] = useState(timeAmount);
+  const [time, setTime] = useState(convertTime(overDateTimestamp));
 
   function updateTime(timestamp) {
-    setTime(convertTime(timestamp, time));
+    setTime(convertTime(timestamp));
   }
 
   useEffect(() => {
