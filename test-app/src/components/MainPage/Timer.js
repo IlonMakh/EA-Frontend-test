@@ -1,32 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Sheet from "../../assets/images/sheet.svg";
-
-const data = [
-  {
-    measure: "Days",
-    short: "DD",
-    amount: "92",
-  },
-
-  {
-    measure: "Hours",
-    short: "HH",
-    amount: "11",
-  },
-
-  {
-    measure: "Minutes",
-    short: "MM",
-    amount: "41",
-  },
-
-  {
-    measure: "Seconds",
-    short: "SS",
-    amount: "48",
-  },
-];
+import { measures, timeAmount } from "../../constants/constants";
+import { convertTime } from "../helpers/convertTime";
 
 const StyledTimer = styled.div`
   display: flex;
@@ -68,6 +44,7 @@ const TimerItem = styled.div`
     padding: 2rem 0;
     font-size: 1.6rem;
     color: white;
+    text-transform: capitalize;
     background: no-repeat center / contain url(${Sheet});
   }
 
@@ -85,28 +62,41 @@ const TimerItem = styled.div`
   }
 `;
 
-export const Timer = () => {
+export const Timer = ({ overDateTimestamp }) => {
   const [screenWidth, setScreenWidth] = useState(window.screen.width);
+  const [time, setTime] = useState(timeAmount);
+
+  function updateTime(timestamp) {
+    setTime(convertTime(timestamp, time));
+  }
 
   useEffect(() => {
+    const intervalId = setInterval(() => {
+      updateTime(overDateTimestamp);
+    }, 1000);
+
     window.onresize = () => {
       setScreenWidth(window.screen.width);
     };
-    return () => (window.onresize = false);
-  }, [screenWidth]);
+
+    return () => {
+      clearInterval(intervalId);
+      window.onresize = false;
+    };
+  }, [overDateTimestamp, screenWidth]);
 
   return (
     <StyledTimer>
-      {data.map((item, index) => {
+      {measures.map((item, index) => {
         return (
           <>
             <TimerItem key={item.measure}>
-              <div className="timer-amount">{item.amount}</div>
+              <div className="timer-amount">{time[item.measure]}</div>
               <div className="timer-measure">
                 {screenWidth <= 1024 ? item.short : item.measure}
               </div>
             </TimerItem>
-            {index !== data.length - 1 ? <StyledSpan>:</StyledSpan> : ""}
+            {index !== measures.length - 1 ? <StyledSpan>:</StyledSpan> : ""}
           </>
         );
       })}

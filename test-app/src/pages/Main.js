@@ -5,6 +5,7 @@ import { Timer } from "../components/MainPage/Timer";
 import styled from "styled-components";
 import { InfoBlock } from "../components/MainPage/InfoBlock";
 import { EventLink } from "../components/MainPage/EventLink";
+import { overDateTimestamp } from "../constants/constants";
 
 const MainWrapper = styled.main`
   display: flex;
@@ -19,7 +20,7 @@ export const MainPage = () => {
       <Header />
       <MainWrapper>
         <InfoBlock />
-        <Timer />
+        <Timer overDateTimestamp={overDateTimestamp} />
         <EventLink />
       </MainWrapper>
       <Footer />
