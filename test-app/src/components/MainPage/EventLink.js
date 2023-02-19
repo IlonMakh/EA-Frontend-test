@@ -12,9 +12,19 @@ const LinkWrapper = styled.div`
 
   .event-text {
     text-align: center;
-    margin-bottom: 10px;
     font-size: 1.8rem;
     line-height: 150%;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+    .event-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
   }
 `;
 
@@ -30,6 +40,11 @@ const LinkBtn = styled.button`
   cursor: pointer;
   text-align: left;
   position: relative;
+  transition: all 1s ease-out;
+
+  &:hover {
+    padding: 1.6rem 5.5rem;
+  }
 
   &:after {
     content: url(${arrow});

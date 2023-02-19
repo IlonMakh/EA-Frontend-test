@@ -6,6 +6,15 @@ const StyledForm = styled.form`
   width: 44rem;
   height: 6rem;
   position: relative;
+
+  @media (max-width: 1024px) {
+    width: 36rem;
+    height: 4rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 28rem;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -19,6 +28,10 @@ const StyledInput = styled.input`
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
   color: rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 1024px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const StyledBtn = styled.button`
@@ -34,6 +47,23 @@ const StyledBtn = styled.button`
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: #162c4e;
+  }
+
+  @media (max-width: 1024px) {
+    width: 3.3rem;
+    height: 3.3rem;
+    top: 0.4rem;
+    right: 0.4rem;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 `;
 
 export const Form = () => {

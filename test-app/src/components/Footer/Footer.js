@@ -8,6 +8,14 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 1024px) {
+    padding: 6rem 0;
+  }
+
+  @media (max-width: 600px) {
+    padding: 5rem 0;
+  }
 `;
 
 export const Footer = () => {
