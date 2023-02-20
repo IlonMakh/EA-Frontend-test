@@ -9,6 +9,9 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
   position: relative;
+  transition: all 0.35s ease-out;
+  transform: translate(0, -50%);
+  opacity: 0;
 
   &:after {
     content: "";
@@ -18,6 +21,9 @@ const StyledHeader = styled.header`
     left: 0;
     width: 47rem;
     height: 41.4rem;
+    opacity: 0;
+    transition: all 0.35s 0.95s ease-out;
+    transform: translate(-50%, -50%);
   }
 
   &:before {
@@ -28,6 +34,9 @@ const StyledHeader = styled.header`
     right: 0;
     width: 29.1rem;
     height: 41.2rem;
+    opacity: 0;
+    transition: all 0.35s 0.95s ease-out;
+    transform: translate(50%, -50%);
   }
 
   .header_logo {
@@ -43,7 +52,7 @@ const StyledHeader = styled.header`
       width: 34rem;
       height: 30rem;
     }
-  
+
     &:before {
       width: 25.1rem;
       height: 35.2rem;
@@ -55,7 +64,7 @@ const StyledHeader = styled.header`
       width: 30rem;
       height: 26rem;
     }
-  
+
     &:before {
       width: 22.1rem;
       height: 30.2rem;
@@ -69,7 +78,7 @@ const StyledHeader = styled.header`
       width: 25rem;
       height: 22rem;
     }
-  
+
     &:before {
       width: 25.1rem;
       height: 23.2rem;
@@ -82,7 +91,7 @@ const StyledHeader = styled.header`
       width: 17.6rem;
       height: 16rem;
     }
-  
+
     &:before {
       width: 15.4rem;
       height: 15rem;
@@ -98,8 +107,8 @@ const StyledHeader = styled.header`
 
 export const Header = () => {
   return (
-    <StyledHeader>
-      <a href="#">
+    <StyledHeader className="animate">
+      <a href={window.location.href}>
         <img className="header_logo" src={Logo} alt="company logo" />
       </a>
     </StyledHeader>

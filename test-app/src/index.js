@@ -19,10 +19,18 @@ html, body, #root {
 .App {
   margin: 0;
   min-height: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
   color: rgba(0, 0, 0, 0.8);
   font-family: "Poppins", sans-serif;
+}
+
+.App.loaded .animate,
+.App.loaded .animate:before,
+.App.loaded .animate:after {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 `;
 

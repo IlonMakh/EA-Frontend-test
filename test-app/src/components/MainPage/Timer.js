@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Sheet from "../../assets/images/sheet.svg";
-import { measures, timeAmount } from "../../constants/constants";
-import { convertTime } from "../../helpers/convertTime";
+import { measures } from "../../constants/constants";
+import { convertTime } from "../../utils/convertTime";
 
 const StyledTimer = styled.div`
   display: flex;
   margin-bottom: 7rem;
+  opacity: 0;
+  transition: all 0.35s 0.75s ease-out;
+  transform: translate(0, -50%);
 
   @media (max-width: 1024px) {
     margin-bottom: 4rem;
@@ -86,7 +89,7 @@ export const Timer = ({ overDateTimestamp }) => {
   }, [overDateTimestamp, screenWidth]);
 
   return (
-    <StyledTimer>
+    <StyledTimer className="animate">
       {measures.map((item, index) => {
         return (
           <>

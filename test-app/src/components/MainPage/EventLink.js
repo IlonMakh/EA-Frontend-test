@@ -9,6 +9,9 @@ const LinkWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  opacity: 0;
+  transition: all 0.35s 0.95s ease-out;
+  transform: translate(0, -50%);
 
   .event-text {
     text-align: center;
@@ -56,9 +59,9 @@ const LinkBtn = styled.button`
 
 export const EventLink = () => {
   return (
-    <LinkWrapper>
+    <LinkWrapper className="animate">
       <p className="event-text">Check our event page when you wait:</p>
-      <a href="https://egorovagency.by/#main">
+      <a target="_blank" rel="noreferrer" href="https://egorovagency.by/#main">
         <LinkBtn>Go to the event</LinkBtn>
       </a>
     </LinkWrapper>

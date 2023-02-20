@@ -8,6 +8,9 @@ const InfoWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  transform: translate(0, -50%);
+  opacity: 0;
+  transition: all 0.35s 0.55s ease-out;
 
   .info-title {
     color: #a4adba;
@@ -53,8 +56,10 @@ const InfoWrapper = styled.div`
 
 export const InfoBlock = () => {
   return (
-    <InfoWrapper>
-      <h1 className="info-title">Under Construction</h1>
+    <InfoWrapper className="animate">
+      <h1 className="info-title">
+        Under Construction
+      </h1>
       <p className="info-text">
         We're making lots of improvements and will be back soon
       </p>
