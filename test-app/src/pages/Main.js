@@ -8,6 +8,7 @@ import { EventLink } from "../components/MainPage/EventLink";
 import { overDateTimestamp } from "../constants/constants";
 import { Popup } from "../components/MainPage/Popup";
 import { useSelector } from "react-redux";
+import { EventsBlock } from "../components/Events/EventsBlock";
 
 const MainWrapper = styled.main`
   display: flex;
@@ -29,6 +30,7 @@ export const MainPage = () => {
       </MainWrapper>
       {global.isPopupOpen && <Popup />}
       <Footer />
+      <EventsBlock />
     </>
   );
 };

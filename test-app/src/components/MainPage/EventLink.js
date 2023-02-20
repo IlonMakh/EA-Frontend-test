@@ -31,7 +31,8 @@ const LinkWrapper = styled.div`
   }
 `;
 
-const LinkBtn = styled.button`
+const LinkBtn = styled.a`
+  display: block;
   width: 24rem;
   height: 6rem;
   padding: 1.6rem 3rem;
@@ -42,11 +43,12 @@ const LinkBtn = styled.button`
   font-size: 1.8rem;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
   position: relative;
   transition: all 1s ease-out;
 
   &:hover {
-    padding: 1.6rem 5.5rem;
+    padding: 1.6rem 5rem;
   }
 
   &:after {
@@ -61,9 +63,9 @@ export const EventLink = () => {
   return (
     <LinkWrapper className="animate">
       <p className="event-text">Check our event page when you wait:</p>
-      <a target="_blank" rel="noreferrer" href="https://egorovagency.by/#main">
-        <LinkBtn>Go to the event</LinkBtn>
-      </a>
+      <LinkBtn target="_blank" rel="noreferrer" href="https://egorovagency.by/#main">
+        Go to the event
+      </LinkBtn>
     </LinkWrapper>
   );
 };

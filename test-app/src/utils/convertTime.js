@@ -1,3 +1,5 @@
+import { addZero } from "./addZero";
+
 export const convertTime = (timestamp) => {
   const now = Math.round(+new Date() / 1000);
   let diff = timestamp - now;
@@ -24,9 +26,3 @@ export const convertTime = (timestamp) => {
     seconds: addZero(seconds),
   };
 };
-
-function addZero(number) {
-  const numberString = number.toString();
-  if (numberString.length >= 2) return numberString;
-  return "0" + numberString;
-}

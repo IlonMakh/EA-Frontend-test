@@ -10,10 +10,12 @@ const StyledForm = styled.form`
   width: 44rem;
   height: 6rem;
   position: relative;
+  margin-left: auto;
 
   @media (max-width: 1024px) {
     width: 36rem;
     height: 4rem;
+    margin-left: 0;
   }
 
   @media (max-width: 500px) {

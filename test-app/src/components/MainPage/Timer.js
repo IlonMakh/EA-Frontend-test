@@ -92,15 +92,15 @@ export const Timer = ({ overDateTimestamp }) => {
     <StyledTimer className="animate">
       {measures.map((item, index) => {
         return (
-          <>
-            <TimerItem key={item.measure}>
+          <React.Fragment key={item.measure}>
+            <TimerItem>
               <div className="timer-amount">{time[item.measure]}</div>
               <div className="timer-measure">
                 {screenWidth <= 1024 ? item.short : item.measure}
               </div>
             </TimerItem>
             {index !== measures.length - 1 ? <StyledSpan>:</StyledSpan> : ""}
-          </>
+          </React.Fragment>
         );
       })}
     </StyledTimer>

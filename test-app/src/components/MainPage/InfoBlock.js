@@ -57,9 +57,9 @@ const InfoWrapper = styled.div`
 export const InfoBlock = () => {
   return (
     <InfoWrapper className="animate">
-      <h1 className="info-title">
+      <h2 className="info-title">
         Under Construction
-      </h1>
+      </h2>
       <p className="info-text">
         We're making lots of improvements and will be back soon
       </p>

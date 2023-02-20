@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 html, body, #root {
   height: 100%;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 .App {
