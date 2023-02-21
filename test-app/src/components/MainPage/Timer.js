@@ -6,7 +6,7 @@ import { convertTime } from "../../utils/convertTime";
 
 const StyledTimer = styled.div`
   display: flex;
-  margin-bottom: 7rem;
+  margin-bottom: 3.4vw;
   opacity: 0;
   transition: all 0.35s 0.75s ease-out;
   transform: translate(0, -50%);
@@ -18,7 +18,7 @@ const StyledTimer = styled.div`
 
 const StyledSpan = styled.span`
   font-family: "Poppins-Semibold", sans-serif;
-  font-size: 7.2rem;
+  font-size: 3.75vw;
   color: #162c4e;
   line-height: 100%;
 
@@ -32,20 +32,20 @@ const TimerItem = styled.div`
   flex-direction: column;
   justify-items: center;
   text-align: center;
-  width: 13rem;
-  height: 13rem;
+  width: 6.7vw;
+  height: 6.7vw;
 
   .timer-amount {
     font-family: "Poppins-Semibold", sans-serif;
-    font-size: 7.2rem;
+    font-size: 3.75vw;
     color: #162c4e;
     line-height: 100%;
   }
 
   .timer-measure {
     width: 100%;
-    padding: 2rem 0;
-    font-size: 1.6rem;
+    padding: 1vw 0;
+    font-size: 0.8vw;
     color: white;
     text-transform: capitalize;
     background: no-repeat center / contain url(${Sheet});

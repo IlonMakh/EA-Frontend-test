@@ -4,18 +4,18 @@ import styled from "styled-components";
 import { EventAccordion } from "./EventAccordion";
 
 const StyledEvents = styled.div`
-  padding: 10rem 0;
+  padding: 5vw 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   display: ${(props) => (props.isOpen ? "flex" : "none")};
-  gap: 4rem;
+  gap: 2vw;
 
   .events_title {
     color: #a4adba;
     font-family: "Poppins-Bold", sans-serif;
-    font-size: 7.2rem;
+    font-size: 3.6vw;
     line-height: 100%;
     text-transform: uppercase;
     text-align: center;

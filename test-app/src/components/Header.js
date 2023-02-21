@@ -19,8 +19,8 @@ const StyledHeader = styled.header`
     position: absolute;
     top: 0;
     left: 0;
-    width: 47rem;
-    height: 41.4rem;
+    width: 24.5vw;
+    height: 21.5vw;
     opacity: 0;
     transition: all 0.35s 0.95s ease-out;
     transform: translate(-50%, -50%);
@@ -32,8 +32,8 @@ const StyledHeader = styled.header`
     position: absolute;
     top: 0;
     right: 0;
-    width: 29.1rem;
-    height: 41.2rem;
+    width: 15.1vw;
+    height: 21.4vw;
     opacity: 0;
     transition: all 0.35s 0.95s ease-out;
     transform: translate(50%, -50%);
@@ -49,58 +49,63 @@ const StyledHeader = styled.header`
 
   @media (max-width: 1200px) {
     &:after {
-      width: 34rem;
-      height: 30rem;
+      width: 28vw;
+      height: 25vw;
     }
 
     &:before {
-      width: 25.1rem;
-      height: 35.2rem;
+      width: 20.9vw;
+      height: 29vw;
     }
   }
 
   @media (max-width: 1024px) {
+
     &:after {
-      width: 30rem;
-      height: 26rem;
+      width: 29vw;
+      height: 25vw;
     }
 
     &:before {
-      width: 22.1rem;
-      height: 30.2rem;
+      width: 21vw;
+      height: 29vw;
     }
   }
 
   @media (max-width: 768px) {
-    padding: 10rem 0;
+    padding: 13vw 0;
+
+    .header_logo {
+      width: 12.8rem;
+    }
 
     &:after {
-      width: 25rem;
-      height: 22rem;
+      width: 32.5vw;
+      height: 28vw;
     }
 
     &:before {
-      width: 25.1rem;
-      height: 23.2rem;
+      width: 32.6vw;
+      height: 30.2vw;
     }
   }
 
   @media (max-width: 600px) {
-    padding: 8rem 0 6rem;
+    padding: 22vw 0 16.6vw;
     &:after {
-      width: 17.6rem;
-      height: 16rem;
+      width: 48vw;
+      height: 44vw;
     }
 
     &:before {
-      width: 15.4rem;
-      height: 15rem;
+      width: 41.7vw;
+      height: 41.6vw;
     }
   }
 
   @media (max-width: 500px) {
     .header_logo {
-      width: 12.8rem;
+      width: 35vw;
     }
   }
 `;

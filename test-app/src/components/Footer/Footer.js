@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { SET_BLOCK_STATE } from "../../redux/actions";
 
 const StyledFooter = styled.footer`
-  padding: 6rem 11rem 7rem;
+  padding: 3.1vw 5.7vw 3.5vw;
   background-color: #162c4e;
   display: flex;
   justify-content: center;
@@ -14,9 +14,9 @@ const StyledFooter = styled.footer`
   position: relative;
 
   .more_btn {
-    font-size: 2rem;
+    font-size: 1vw;
     text-transform: capitalize;
-    padding: 1rem;
+    padding: 0.5vw;
     background: transparent;
     text-decoration: none;
     cursor: pointer;
@@ -31,10 +31,13 @@ const StyledFooter = styled.footer`
   }
 
   .more_btn:after {
-    content: url(${DownArrow});
+    content: "";
+    background: no-repeat center/contain url(${DownArrow});
     position: absolute;
-    top: 1rem;
-    right: -2rem;
+    top: 0.5vw;
+    right: -1vw;
+    width: 1.25vw;
+    height: 1.25vw;
   }
 
   @media (max-width: 1024px) {
@@ -48,11 +51,12 @@ const StyledFooter = styled.footer`
     }
 
     .more_btn:after {
-      top: 0.7rem;
-      right: -1rem;
+      top: 0.9rem;
+      right: -2rem;
       width: 1.6rem;
       height: 1.6rem;
     }
+  }
   }
 
   @media (max-width: 600px) {
