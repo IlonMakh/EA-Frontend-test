@@ -1,12 +1,13 @@
 import { MainPage } from "./pages/Main";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import { useRef } from "react";
-import { useAppLoaded } from "./hooks/useAnimation";
+import { useEffect, useRef } from "react";
 
 function App() {
   const app = useRef();
-  useAppLoaded(app);
+  useEffect(() => {
+    app.current.classList.add("loaded");
+  }, []);
   return (
     <Provider store={store}>
       <div ref={app} className="App">
